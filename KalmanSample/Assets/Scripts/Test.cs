@@ -19,8 +19,8 @@ public class Test : MonoBehaviour {
 	
 	void Awake ()
 	{
-		//kalman = new MatrixKalmanWrapper ();
-		kalman = new SimpleKalmanWrapper ();
+		kalman = new MatrixKalmanWrapper ();
+		//kalman = new SimpleKalmanWrapper ();
 	}
 		
 	void Start ()

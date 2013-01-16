@@ -1,8 +1,10 @@
 using UnityEngine;
-using System;
-using Kalman;
 
 namespace Kalman {
+	
+	/// <summary>
+	/// Matrix kalman wrapper.
+	/// </summary>
 	public class MatrixKalmanWrapper : IKalmanWrapper
 	{
 		private KalmanFilter kX;

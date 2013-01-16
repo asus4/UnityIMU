@@ -1,7 +1,10 @@
 using UnityEngine;
-using System.Collections;
 
 namespace Kalman {
+	
+	/// <summary>
+	/// Simple kalman wrapper.
+	/// </summary>
 	public class SimpleKalmanWrapper : IKalmanWrapper {
 		
 		private KalmanFilterSimple1D kX;
