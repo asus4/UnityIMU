@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[AddComponentMenu("IMU/IMUObject")]
 public class IMUObject : MonoBehaviour {
 	#region privates
 	Transform _transform;
@@ -16,7 +17,7 @@ public class IMUObject : MonoBehaviour {
 	{	
 		_transform = this.transform;
 		
-		// set syro
+		// set gyro
 		Input.gyro.enabled = true;
 		Input.gyro.updateInterval = 100;
 		

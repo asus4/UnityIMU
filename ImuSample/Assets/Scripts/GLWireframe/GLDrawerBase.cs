@@ -2,7 +2,6 @@ using UnityEngine;
 
 [AddComponentMenu("Wireframe/GL Drawer Base")]
 public abstract class GLDrawerBase : MonoBehaviour {
-	//protected Matrix4x4 translateCenterMatrix = Matrix4x4.TRS (new Vector3 (0.5f, 0.5f, 0), Quaternion.identity, Vector3.one);
 	
 	public void Draw (Matrix4x4 camMatrix)
 	{
@@ -13,7 +12,6 @@ public abstract class GLDrawerBase : MonoBehaviour {
 		GL.PushMatrix ();
 		GL.MultMatrix (camMatrix);
 		GL.MultMatrix (transform.localToWorldMatrix);
-		//GL.MultMatrix (transform.localToWorldMatrix * camMatrix);
 		OnDraw ();
 		GL.PopMatrix ();
 	}
