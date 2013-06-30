@@ -19,7 +19,7 @@ public class IMUObject : MonoBehaviour {
 		
 		// set gyro
 		Input.gyro.enabled = true;
-		Input.gyro.updateInterval = 100;
+		Input.gyro.updateInterval = 0.02f;
 		
 		initialRotation = _transform.localRotation;
 		gyroInitialRotation = Input.gyro.attitude;
@@ -35,7 +35,7 @@ public class IMUObject : MonoBehaviour {
 		// rotation
 		Quaternion offsetRotation = Quaternion.Inverse (gyroInitialRotation) * Input.gyro.attitude;
 		offsetRotation = this.getEulerInverse (offsetRotation);
-		_transform.localRotation = initialRotation * offsetRotation;		
+		_transform.localRotation = initialRotation * offsetRotation;
 	}
 	#endregion
 	
